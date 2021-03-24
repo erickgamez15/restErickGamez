@@ -12,4 +12,8 @@ router.get('/v1/guest', invitados.listaInvitados)
 //aqui definimos el endpoint (la url para acceder al recurso statusAsistencia)
 const asistencia= require("../modulos/StatusAsistencia/asistencia");
 router.get('/v1/asistencia', asistencia.statusAsistencia)
+
+//aqui definimos el endpoint (la url para acceder al recurso usuarios)
+const usuarios= require("../modulos/usuarios/usuarios");
+router.get("/v1/user", usuarios.listaUsuarios)
 module.exports = router;
