@@ -1,17 +1,17 @@
 const dbCon = require("../Configuracion/Config");
 
-function listaEvento(req, res, next){
-    dbCon.any('SELECT * FROM event_uc')
+function listaAsistencia(req, res, next){
+    dbCon.any('SELECT * FROM assistance')
     .then(function(data){
         res.json({
             status:"ok",
             result:data,
-            mensaje:"Lista de eventos"
+            mensaje:"Lista de asistencia"
         })
     })
 }
 
 
 module.exports = {
-    listaEvento:listaEvento
+    listaAsistencia:listaAsistencia
 }
